@@ -4,5 +4,6 @@ maxturnins 10
 binary 0
 daypenalty 10
 weekendpenalty 5
+showpenalty 1
 duedate 20150820 23:59
 lockdate 20150903 23:59
