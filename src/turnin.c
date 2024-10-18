@@ -636,7 +636,7 @@ void setup(char *arg) {
 				}
 				weekendpenalty = n;
 			} else if (strcasecmp(keyword, "showpenalty") == 0) {
-				if ((n != 0) || (n != 1)) {
+				if ((n != 0) && (n != 1)) {
 					fprintf(stderr, "turnin: showpenalty must be either 0 or 1\n"
 					                "        Please notify the Instructor or a TA.\n");
 					exit(1);
@@ -1396,8 +1396,8 @@ void checkdue() {
 	}
 	if ((penalty > 0)&& (showpenalty)) {
 		fprintf(stderr, "\n*** This turn in will get %d%% penalty, due to late turn in, on the final grade ***\n", penalty);
+		wanttocontinue();
 	}
-	wanttocontinue();
 }
 
 void ignore_signal(int signum) {
